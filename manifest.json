@@ -1,11 +1,11 @@
 {
-  "name": "Ishani - Multiplayer",
+  "name": "Ishani - Multiplayer game",
   "short_name": "Ishani",
-  "description": "Beautiful offline multiplayer mini-games collection. Play vs Friend or vs Bot.",
+  "description": "Beautiful offline multiplayer mini-games. Play vs Friend or vs Bot.",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#0f0c29",
+  "background_color": "#0b0918",
   "theme_color": "#302b63",
   "icons": [
     {
