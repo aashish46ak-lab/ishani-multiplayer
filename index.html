@@ -1,1 +1,86 @@
-SEE_FILE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="theme-color" content="#302b63"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="description" content="Ishani - Multiplayer game. 16 offline 2-player mini games."/>
+<title>Ishani - Multiplayer game</title>
+<link rel="manifest" href="manifest.json"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div id="splash">
+  <div class="splash-bg"><div class="splash-orb splash-orb-1"></div><div class="splash-orb splash-orb-2"></div><div class="splash-orb splash-orb-3"></div></div>
+  <div class="splash-content">
+    <div class="splash-logo">
+      <div class="splash-ring"></div>
+      <div class="splash-core">I</div>
+    </div>
+    <h1 class="splash-title">Ishani</h1>
+    <p class="splash-sub">Multiplayer game</p>
+    <div class="splash-loader"><div class="splash-bar"></div></div>
+    <p class="splash-tag">16 Games · Offline · 2 Players</p>
+  </div>
+</div>
+<div id="app">
+<section id="home" class="screen active">
+  <div class="topbar">
+    <div class="activity-pill"><span class="av" id="profile-avatar-display">🎮</span><span><strong id="profile-name-display">Player</strong> · <span id="activity-text">Start playing!</span></span></div>
+    <div class="streak-badge"><span class="fire">🔥</span><span id="streak-count">1</span></div>
+  </div>
+  <div class="home-head"><h1>Ishani - Multiplayer game</h1><p class="sub">Play vs Friend or Bot · Fully offline</p></div>
+  <div class="search-row"><input type="search" id="search-games" placeholder="Search games..." autocomplete="off"/></div>
+  <div class="profile-row"><button type="button" class="profile-btn" id="btn-profile"><span class="big-av">⚙️</span><span class="info"><strong>My Profile</strong><span>Name, avatar & stats</span></span><span class="chev">›</span></button></div>
+  <div class="games-grid" id="games-grid"></div>
+</section>
+<section id="detail" class="screen">
+  <button class="back-btn" id="detail-back">←</button>
+  <div class="detail-hero"><div class="detail-art" id="detail-art"></div><h2 id="detail-title"></h2><p id="detail-desc"></p><div class="detail-meta" id="detail-meta"></div></div>
+  <div class="detail-actions">
+    <button class="btn btn-friend" id="btn-friend"><span class="btn-icon">👥</span><span>Play vs Friend</span></button>
+    <button class="btn btn-bot" id="btn-bot"><span class="btn-icon">🤖</span><span>Play vs Bot</span></button>
+  </div>
+</section>
+<section id="play" class="screen">
+  <div class="play-header">
+    <button class="back-btn" id="play-back" style="position:relative;top:0;left:0">←</button>
+    <h2 id="play-title"></h2>
+    <button class="icon-btn" id="btn-restart">↻</button>
+  </div>
+  <div class="teams-bar">
+    <div class="team red" id="team-red"><div class="team-color"></div><div class="team-info"><span class="team-name" id="red-name">Red</span><span class="team-score" id="red-score">0</span></div><div class="turn-dot" id="red-turn"></div></div>
+    <div class="vs-label">VS</div>
+    <div class="team blue" id="team-blue"><div class="turn-dot" id="blue-turn"></div><div class="team-info"><span class="team-name" id="blue-name">Blue</span><span class="team-score" id="blue-score">0</span></div><div class="team-color"></div></div>
+  </div>
+  <div class="turn-banner" id="turn-banner"><span id="turn-text">Red's Turn</span></div>
+  <div class="game-stage" id="game-stage"></div>
+  <div class="play-footer" id="play-footer"></div>
+</section>
+<div id="result-modal" class="modal hidden"><div class="modal-card"><div class="result-emoji" id="result-emoji">🎉</div><h3 id="result-title">Winner!</h3><p id="result-msg"></p><div class="modal-actions"><button class="btn btn-friend" id="result-rematch">Rematch</button><button class="btn btn-ghost" id="result-home">Home</button></div></div></div>
+<div id="profile-sheet" class="hidden"><div class="sheet"><h3>My Profile</h3><label>Display name</label><input id="pf-name" maxlength="20" placeholder="Your name"/><label>Avatar</label><input id="pf-avatar" maxlength="4" placeholder="🎮"/><div class="avatar-row"><button type="button" class="avatar-pick" data-av="🎮">🎮</button><button type="button" class="avatar-pick" data-av="🔥">🔥</button><button type="button" class="avatar-pick" data-av="⭐">⭐</button><button type="button" class="avatar-pick" data-av="🦊">🦊</button><button type="button" class="avatar-pick" data-av="🐱">🐱</button><button type="button" class="avatar-pick" data-av="🐼">🐼</button><button type="button" class="avatar-pick" data-av="🚀">🚀</button><button type="button" class="avatar-pick" data-av="💜">💜</button></div><div id="pf-stats"></div><div class="sheet-actions"><button class="btn btn-ghost" id="pf-close">Close</button><button class="btn btn-bot" id="pf-save">Save</button></div></div></div>
+</div>
+<script src="js/games-data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/games/memory.js"></script>
+<script src="js/games/tictactoe.js"></script>
+<script src="js/games/connect4.js"></script>
+<script src="js/games/rps.js"></script>
+<script src="js/games/dots.js"></script>
+<script src="js/games/checkers.js"></script>
+<script src="js/games/snake.js"></script>
+<script src="js/games/pong.js"></script>
+<script src="js/games/airhockey.js"></script>
+<script src="js/games/battleship.js"></script>
+<script src="js/games/carrom.js"></script>
+<script src="js/games/ludo.js"></script>
+<script src="js/games/snakesladders.js"></script>
+<script src="js/games/simon.js"></script>
+<script src="js/games/hangman.js"></script>
+<script src="js/games/react.js"></script>
+<script src="js/app.js"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}</script>
+</body>
+</html>
