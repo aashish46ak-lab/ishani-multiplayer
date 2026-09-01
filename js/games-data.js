@@ -1,18 +1,1 @@
-const GAMES = [
-  { id: 'memory', name: 'Memory Magic', image: 'assets/previews/memory.svg', color: 'linear-gradient(145deg,#5b21b6,#a78bfa)', desc: 'Flip cards and find matching pairs.', tags: ["Classic", "Puzzle"], players: '2P / Bot', difficulty: 'Easy' },
-  { id: 'tictactoe', name: 'Tic Tac Toe', image: 'assets/previews/tictactoe.svg', color: 'linear-gradient(145deg,#be123c,#fb7185)', desc: 'Three in a row wins.', tags: ["Classic", "Quick"], players: '2P / Bot', difficulty: 'Easy' },
-  { id: 'connect4', name: 'Connect Four', image: 'assets/previews/connect4.svg', color: 'linear-gradient(145deg,#1d4ed8,#38bdf8)', desc: 'Drop discs and connect four.', tags: ["Strategy", "Classic"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'rps', name: 'Rock Paper Scissors', image: 'assets/previews/rps.svg', color: 'linear-gradient(145deg,#9d174d,#f472b6)', desc: 'Best of rounds with score tracking.', tags: ["Quick", "Classic"], players: '2P / Bot', difficulty: 'Easy' },
-  { id: 'dots', name: 'Dots & Boxes', image: 'assets/previews/dots.svg', color: 'linear-gradient(145deg,#065f46,#34d399)', desc: 'Claim lines, complete boxes.', tags: ["Strategy"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'checkers', name: 'Checkers', image: 'assets/previews/checkers.svg', color: 'linear-gradient(145deg,#44403c,#a8a29e)', desc: 'Classic draughts on 8×8.', tags: ["Strategy"], players: '2P / Bot', difficulty: 'Hard' },
-  { id: 'snake', name: 'Snake Duel', image: 'assets/previews/snake.svg', color: 'linear-gradient(145deg,#14532d,#4ade80)', desc: 'Two snakes, one arena.', tags: ["Arcade"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'pong', name: 'Pong', image: 'assets/previews/pong.svg', color: 'linear-gradient(145deg,#0f172a,#64748b)', desc: 'The original arcade classic.', tags: ["Arcade"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'airhockey', name: 'Air Hockey', image: 'assets/previews/airhockey.svg', color: 'linear-gradient(145deg,#0c4a6e,#38bdf8)', desc: 'Fast-paced table hockey.', tags: ["Arcade"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'battleship', name: 'Battleship', image: 'assets/previews/battleship.svg', color: 'linear-gradient(145deg,#1e3a5f,#60a5fa)', desc: 'Hunt the enemy ships.', tags: ["Strategy"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'carrom', name: 'Carrom', image: 'assets/previews/carrom.svg', color: 'linear-gradient(145deg,#78350f,#d6a56a)', desc: 'Pocket the coins.', tags: ["Skill"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'ludo', name: 'Ludo Race', image: 'assets/previews/ludo.svg', color: 'linear-gradient(145deg,#b91c1c,#fbbf24)', desc: 'Race your tokens home.', tags: ["Board"], players: '2P / Bot', difficulty: 'Easy' },
-  { id: 'snakesladders', name: 'Snakes & Ladders', image: 'assets/previews/snakesladders.svg', color: 'linear-gradient(145deg,#0f766e,#fde047)', desc: 'Climb ladders, avoid snakes.', tags: ["Board"], players: '2P / Bot', difficulty: 'Easy' },
-  { id: 'simon', name: 'Simon Says', image: 'assets/previews/simon.svg', color: 'linear-gradient(145deg,#6b21a8,#f472b6)', desc: 'Repeat the sequence.', tags: ["Memory"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'hangman', name: 'Hangman Duel', image: 'assets/previews/hangman.svg', color: 'linear-gradient(145deg,#1e293b,#f97316)', desc: 'Guess the word.', tags: ["Word"], players: '2P / Bot', difficulty: 'Medium' },
-  { id: 'react', name: 'Reaction Duel', image: 'assets/previews/react.svg', color: 'linear-gradient(145deg,#a16207,#facc15)', desc: 'Fastest reaction wins.', tags: ["Arcade"], players: '2P / Bot', difficulty: 'Easy' }
-];
+PLACEHOLDER_WILL_FAIL
