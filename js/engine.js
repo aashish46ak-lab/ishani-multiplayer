@@ -38,19 +38,22 @@ const Engine = {
     const redScore = document.getElementById('red-score');
     const blueScore = document.getElementById('blue-score');
 
-    redEl.classList.toggle('active', this.turn === 'red' && !this.gameOver);
-    blueEl.classList.toggle('active', this.turn === 'blue' && !this.gameOver);
+    if (redEl) redEl.classList.toggle('active', this.turn === 'red' && !this.gameOver);
+    if (blueEl) blueEl.classList.toggle('active', this.turn === 'blue' && !this.gameOver);
 
-    banner.className = 'turn-banner ' + this.turn;
-    if (this.gameOver) {
-      turnText.textContent = 'Game Over';
-    } else {
-      const name = this.turn === 'red' ? (document.getElementById('red-name').textContent) : (document.getElementById('blue-name').textContent);
-      turnText.textContent = name + "'s Turn";
+    if (banner) banner.className = 'turn-banner ' + this.turn;
+    if (turnText) {
+      if (this.gameOver) {
+        turnText.textContent = 'Game Over';
+      } else {
+        const name = this.turn === 'red'
+          ? (document.getElementById('red-name')?.textContent || 'Red')
+          : (document.getElementById('blue-name')?.textContent || 'Blue');
+        turnText.textContent = name + "'s Turn";
+      }
     }
-
-    redScore.textContent = this.scores.red;
-    blueScore.textContent = this.scores.blue;
+    if (redScore) redScore.textContent = this.scores.red;
+    if (blueScore) blueScore.textContent = this.scores.blue;
   },
 
   showResult(winner, msg) {
@@ -60,23 +63,22 @@ const Engine = {
     const emoji = document.getElementById('result-emoji');
     const title = document.getElementById('result-title');
     const msgEl = document.getElementById('result-msg');
-
     if (winner === 'draw') {
-      emoji.textContent = '🤝';
-      title.textContent = "It's a Draw!";
+      if (emoji) emoji.textContent = '🤝';
+      if (title) title.textContent = "It's a Draw!";
     } else if (winner === 'red') {
-      emoji.textContent = '🔴';
-      title.textContent = 'Red Wins!';
+      if (emoji) emoji.textContent = '🔴';
+      if (title) title.textContent = 'Red Wins!';
     } else {
-      emoji.textContent = '🔵';
-      title.textContent = 'Blue Wins!';
+      if (emoji) emoji.textContent = '🔵';
+      if (title) title.textContent = 'Blue Wins!';
     }
-    msgEl.textContent = msg || '';
-    modal.classList.remove('hidden');
+    if (msgEl) msgEl.textContent = msg || '';
+    if (modal) modal.classList.remove('hidden');
   },
 
   hideResult() {
-    document.getElementById('result-modal').classList.add('hidden');
+    document.getElementById('result-modal')?.classList.add('hidden');
   },
 
   botThink(fn, ms = 450) {
@@ -90,11 +92,12 @@ const Engine = {
 
   clearStage() {
     const stage = document.getElementById('game-stage');
-    stage.innerHTML = '';
+    if (stage) stage.innerHTML = '';
     return stage;
   },
 
   setFooter(html) {
-    document.getElementById('play-footer').innerHTML = html || '';
+    const el = document.getElementById('play-footer');
+    if (el) el.innerHTML = html || '';
   }
 };
